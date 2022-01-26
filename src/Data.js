@@ -1,5 +1,11 @@
 const Data = [
   {
+    id: 0,
+    image: '../imgs/img0.jpg',
+    title: 'title one',
+    price: 10
+  },
+  {
     id: 1,
     image: '../imgs/img0.jpg',
     title: 'title one',

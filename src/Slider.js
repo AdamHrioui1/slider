@@ -1,19 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import data from './Data'
+import Item from './Item';
 
 function Slider() {
+  const [counter, setCounter] = useState(0)
   return <div>
       <h1>Slider</h1>
       <div className="wrapper">
-        <div className="item">
-          <div className="img_container">
-            <img src="../imgs/img0.jpg" />
-          </div>
+        {
+          data.map((item, index) => {
+            return <Item key={index} data={item} counter={counter} />
+          })
+        }
+      </div>
 
-          <p>hello everyone, this is a random text </p>
-        </div>
-      </div>  
-
+      <button onClick={() => setCounter(counter+1)} >L</button>
   </div>;
 }
 
