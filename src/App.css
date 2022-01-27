@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -13,9 +14,13 @@ body {
   justify-content: center;
 }
 
+h1 {
+  text-align: center;
+}
+
 .wrapper {
   position: relative;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   width: 100vw;
   height: 400px;
   padding: 20px;
@@ -24,12 +29,14 @@ body {
   align-items: center;
   justify-content: space-between;
 
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   overflow: hidden;
+  z-index: 1000;
 }
 
 .item {
   position: absolute;
+  padding: 10px;
   /* width: 20vw;
   height: 25vw; */
 
@@ -38,28 +45,60 @@ body {
   justify-content: center;
   flex-direction: column;
 
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   transition: .4s;
+}
+
+.item h2 {
+  text-align: center;
+  font-size: 17px;
+}
+
+.item span {
+  margin-top: 5px;
+  font-weight: 500;
+  color: #333;
 }
 
 .img_container {
   margin: 20px;
-  width: 80px;
-  height: 80px;
-
-  border-radius: 50%;
-  overflow: hidden;
+  width: 90%;
+  height: 50%;
 }
 
 .img_container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+.sliderBtn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  outline: none;
+  /* border: 1px solid #000; */
+  border: none;
+  background-color: transparent;
+  color: #000;
+  z-index: 1001;
+
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 800px) {
   .item {
     width: 30vw;
     height: 30wv;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .sliderBtn {
+    width: 22px;
+    height: 22px;
   }
 }
