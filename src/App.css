@@ -73,6 +73,8 @@ h1 {
 }
 
 .sliderBtn {
+  position: absolute;
+  top: 50%;
   width: 30px;
   height: 30px;
   display: flex;
@@ -88,6 +90,12 @@ h1 {
 
   cursor: pointer;
 }
+.sliderBtn.left {
+  left: 10px;
+}
+.sliderBtn.right {
+  right: 10px;
+}
 
 @media only screen and (max-width: 800px) {
   .item {
@@ -97,6 +105,9 @@ h1 {
 }
 
 @media only screen and (max-width: 420px) {
+  * {
+    cursor: none;
+  }
   .sliderBtn {
     width: 22px;
     height: 22px;
