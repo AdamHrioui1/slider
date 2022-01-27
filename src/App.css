@@ -30,19 +30,36 @@ body {
 
 .item {
   position: absolute;
-  width: 20vw;
-  height: 20vw;
+  /* width: 20vw;
+  height: 25vw; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
   border: 1px solid #000;
   transition: .4s;
 }
 
 .img_container {
+  margin: 20px;
   width: 80px;
   height: 80px;
+
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .img_container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 800px) {
+  .item {
+    width: 30vw;
+    height: 30wv;
+  }
 }
